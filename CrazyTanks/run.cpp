@@ -185,7 +185,7 @@ void BuildMap()//рисуем поле , танки и время
              if(i==tank4Y+1 && j==tank4X-1 )
              Map[i][j]='#';}}
  cout<<endl;
- cout<<"\t\t\tP.S.Did not have time to make the walls"<<endl;
+ cout<<endl;
  cout<<"Key 'g'= GameOver"<<endl;;
  cout<<"\tScore: "<<score;//вывод очков за убийство вражеского танка
  cout<<"\t\tLives: "<<Lives;//вывод количество жизней танка
