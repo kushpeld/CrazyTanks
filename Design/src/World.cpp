@@ -1,12 +1,6 @@
 #include "World.h"
 
 World world;
-void World::Setup()
-{
-  mytank.Setup();
-  enemy.Setup();
-  wall.Position();
-}
 void World::BuildMap()
 {
   string Map[35]={
@@ -251,4 +245,10 @@ if((bullet.b4==mytank.y+1 && bullet.a4==mytank.x)||(bullet.b4==mytank.y+1 && bul
               { bullet.a4=enemy.tank4X;
                 bullet.b4=(enemy.tank4Y+2);
                 mytank.Lives-=1;}
+}
+void World::Setup()
+{
+  mytank.Setup();
+  enemy.Setup();
+  wall.Position();
 }

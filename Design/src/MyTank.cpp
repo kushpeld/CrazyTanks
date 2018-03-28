@@ -6,32 +6,7 @@ MyTank mytank;
   x=width/2-1;//середина ширины
   y=height-2;
 }
-void MyTank::Position()
-{
 
-
-  for(int i=0;i<height;i++)//расположение моего танка
-	{
-	 for(int j=0;j<width;j++)
-	 {if(i==y && j==x+1)
-	Map[i][j]='-';
-	if(i==y && j==x-1)
-		Map[i][j]='-';
-		if(i==y-1 && j==x)
-			Map[i][j]='!';
-			if(i==y+1 && j==x)
-				Map[i][j]='=';
-				if(i==y-1 && j==x-1)
-					Map[i][j]='|';
-					if(i==y+1 && j==x+1)
-						Map[i][j]='|';
-						if(i==y-1 && j==x+1)
-							Map[i][j]='|';
-							if(i==y+1 && j==x-1)
-								Map[i][j]='|';
-								if(i==y && j==x)
-									Map[i][j]='*';}}
-}
 void MyTank::Input()//нажатия клавиш для движение моего танка
 {
   if(_kbhit())
@@ -60,6 +35,31 @@ void MyTank::Input()//нажатия клавиш для движение мое
           break;
 
     }}}
+    void MyTank::Position()
+    {
+
+
+      for(int i=0;i<height;i++)//расположение моего танка
+    	{
+    	 for(int j=0;j<width;j++)
+    	 {if(i==y && j==x+1)
+    	Map[i][j]='-';
+    	if(i==y && j==x-1)
+    		Map[i][j]='-';
+    		if(i==y-1 && j==x)
+    			Map[i][j]='!';
+    			if(i==y+1 && j==x)
+    				Map[i][j]='=';
+    				if(i==y-1 && j==x-1)
+    					Map[i][j]='|';
+    					if(i==y+1 && j==x+1)
+    						Map[i][j]='|';
+    						if(i==y-1 && j==x+1)
+    							Map[i][j]='|';
+    							if(i==y+1 && j==x-1)
+    								Map[i][j]='|';
+    								if(i==y && j==x)
+    									Map[i][j]='*';}}}
     void MyTank::Logic()
     {
       switch(dir)//движение моего танка
