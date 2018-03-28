@@ -17,6 +17,20 @@ void Game::Time()
     sec=1;min=1;hour++;
   }
 }
+void StartMenu() {
+    cout<<"START: Press 1.\nExit: Press ESC";
+    char c=0;
+    while(c!=27){
+        c=_getch();
+        switch(c){
+            case '1':
+                start=1;
+                c=27;
+                break;
+            case 27: //ESC
+                stop=1;
+                break;
+              }}}
 void Game::Status()
 {srand( time( 0 ) );
   world.Setup();

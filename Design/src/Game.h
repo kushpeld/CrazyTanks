@@ -11,4 +11,5 @@ class Game
   int second;
   void Status();
   void Time();
+  void StartMenu();
 };
