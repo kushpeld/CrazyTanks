@@ -1,4 +1,5 @@
 #include "MyTank.h"
+
 MyTank mytank;
  void MyTank::Setup()
 {

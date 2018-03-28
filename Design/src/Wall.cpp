@@ -1,4 +1,5 @@
 #include "Wall.h"
+
 Wall wall;
 void Wall::Position()
 {

@@ -1,4 +1,5 @@
 #include "Bullet.h"
+
 Bullet bullet;
 void Bullet::Position()
 { a=mytank.x;
@@ -11,13 +12,13 @@ void Bullet::Position()
   b3=enemy.tank3Y;
   a4=enemy.tank4X;
   b4=enemy.tank4Y;
-  for(int i=0;i<height;i++)//расположение моего танка
+  for(int i=0;i<height;i++)
 	{
 	 for(int j=0;j<width;j++)
 	 {
   if(i==b-2 && j==a)
    Map[i][j]='*';
-   if(i==b1-2 && j==a1)//расположение вражеского танка1
+   if(i==b1-2 && j==a1)
    Map[i][j]='*';
    if(i==b2 && j==a2-2)
      Map[i][j]='*';
@@ -29,7 +30,7 @@ void Bullet::Position()
 }
 void Bullet::Logic()
 {direct=rand()%5;
-{  switch(direct)//движение вражеских танков , моих и вражеских пуль
+{  switch(direct)//движение  моих и вражеских пуль
   {
     case 1:
         b--;b1--;a3++;b4++;a2--;
